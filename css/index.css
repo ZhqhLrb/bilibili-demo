@@ -83,7 +83,7 @@ li {
     margin-right: 10px;
 }
 .menu-post {
-    display: block;
+    // display: block;
     position: relative;
     z-index: 9;
     height: 48px;
@@ -109,8 +109,13 @@ li {
 .menu-post:hover {
     background-color: #fe84ac;
 }
+.menu-post:hover .sub-menu {
+    opacity: 1;
+    visibility: visible;
+}
 .sub-menu {
-    display: none;
+    opacity: 0;
+    visibility: hidden;
     position: absolute;
     z-index: 999;
     bottom: -58px;
@@ -121,6 +126,7 @@ li {
     border-bottom-left-radius: 4px;
     border-bottom-right-radius: 4px;
     color: #f25d8e;
+    transition: opacity .2s;
 }
 .sub-menu:before,
 .sub-menu:after {
@@ -166,9 +172,6 @@ li {
 }
 .post-center {
     background-position: -445px -1737px;
-}
-.menu-post:hover .sub-menu {
-    display: block;
 }
 .header-content {
     position: relative;
