@@ -2,7 +2,9 @@
     margin: 0px;
     padding: 0px;
     border: none;
-    font-family: 'Helvetica Neue', Helvetica, Arial, 'Microsoft Yahei', 'Hiragino Sans GB', 'Heiti SC', 'WenQuanYi Micro Hei', sans-serif; 
+    font-family: 'Helvetica Neue', Helvetica, Arial, 'Microsoft Yahei', 'Hiragino Sans GB', 'Heiti SC', 'WenQuanYi Micro Hei', sans-serif;
+}
+body {
     font-size: 12px;
 }
 a {
@@ -29,7 +31,7 @@ li {
 }
 .header-nav-content {
     height: 42px;
-    width: 960px;
+    width: 1160px;
     margin: 0 auto;
     line-height: 42px;
     color: #fff;
@@ -175,7 +177,7 @@ li {
 }
 .header-content {
     position: relative;
-    width: 960px;
+    width: 1160px;
     margin: 0 auto;
 }
 .header-content:before,
@@ -239,6 +241,7 @@ li {
     width: 200px;
     padding: 0 12px;
     line-height: 32px;
+    font-size: 12px;
     white-space:nowrap;
     resize: none;
     outline: none;
@@ -261,20 +264,162 @@ li {
 .search-btn:hover {
     background-position: -718px -720px;
 }
+.container {
+    width: 1160px;
+    margin: 0 auto;
+}
+.container-nav {
+    position: relative;
+    z-index: 9;
+}
+.container-nav:before,
+.container-nav:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.container-nav-item {
+    position: relative;
+    float: left;
+    height: 50px;
+    width: 48px;
+    margin-right: 12px;
+    text-align: center;
+    line-height: 76px;
+    color: #222;
+}
+.container-nav-item:hover .container-sub-nav {
+    display: block;
+}
+.home {
+    width: auto;
+    margin-right: 18px;
+    background-image: url(../img/icons.png);
+    background-repeat: no-repeat;
+    background-position: -658px -1164px;
+}
+.num-wrap {
+    position: absolute;
+    top: 14px;
+    left: 0px;
+    height: 14px;
+    width: 100%;
+}
+.num {
+    display: inline-block;
+    height: 12px;
+    min-width: 18px;
+    padding: 1px 3px;
+    margin: 0 auto;
+    border-radius: 4px;
+    vertical-align: top;
+    font-size: 12px;
+    font-family: Calibri, Arial, Helvetica, sans-serifsans-serif;
+    line-height: 1;
+    color: #fff;
+    background-color: #ffafc9;
+}
+.nav-name {
+    font-size: 14px;
+}
+.container-sub-nav {
+    position: absolute;
+    display: none;
+    z-index: 99;
+    top: 50px;
+    left: 0;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+.container-sub-nav-item {
+    position: relative;
+    width: 120px;
+    line-height: 20px;
+    text-align: left;
+    overflow: hidden;
+    background-image: url(../img/icons2.png);
+    background-repeat: no-repeat;
+    background-position: 11px -1613px;
+    transition: .2s transform;
+}
+.sub-nav-link {
+    display: block;
+    position: relative;
+    padding: 5px 15px 5px 25px;
+}
+.sub-nav-name {
+    position: relative;
+}
+.sub-nav-arrow {
+    position: absolute;
+    top: -3px;
+    right: -100px;
+    height: 18px;
+    width: 15px;
+    background-image: url(../img/icons2.png);
+    background-repeat: no-repeat;
+    background-position: 0 -1581px;
+    transition: .2s right;
+}
+.container-sub-nav-item:hover {
+    transform: translate(5px, 0);
+}
+.container-sub-nav-item:hover .sub-nav-arrow {
+    right: -21px;
+}
+.side-nav {
+    float: left;
+    margin-left: 10px;
+    margin-right: 16px;
+    line-height: 60px;
+    font-size: 16px;
+}
+.side-nav:hover {
+    color: #00a1d6;
+}
+.side-nav-icon {
+    float: left;
+    height: 50px;
+    width: 22px;
+    background-image: url(../img/icons.png);
+    background-repeat: no-repeat;
+}
+.square {
+    background-position: -664px -899px;
+}
+.live {
+    background-position: -664px -513px;
+}
+.blackroom {
+    background-position: -727px -514px;
+}
+.nav-gif {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 50px;
+    padding: 6px 0;
+}
+.nav-gif img {
+    height: 44px;
+    width: 76px;
+    margin-top: 3px;
+    margin-right: 4px;
+}
 
 
 
 
-
-
-
-
-
-
-
-@media screen and (min-width: 1400px) {
+@media screen and (max-width: 1400px) {
     .header-nav-content,
-    .header-content {   
-        width: 1160px;
+    .header-content,
+    .container {   
+        width: 960px;
+    }
+    .container-nav-item {
+        margin-right: -1px;
+    }
+    .home {
+        margin-right: 12px;
     }
 }
